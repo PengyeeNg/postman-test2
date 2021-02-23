@@ -17,7 +17,7 @@ install:
   #- node_modules/.bin/newman --version
 
 script:
-  - node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests/aliyun_staging.postman3_environment.json
+  - node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
 
 # deploy:
   # provider: script
