@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - '14.15.5'
+#dist: trusty
+os: windows
+
+cache:
+  directories:
+    - /C:/Users/Lenovo/postmanci3/node_modules
+
+install:
+  - npm install newman
+
+#before_script:
+  #- node --version
+  #- npm --version
+  #- node_modules/.bin/newman --version
+
+script:
+  - node_modules/.bin/newman run tests3/Frontend_Calls3.postman_collection.json -e tests/aliyun_staging3.postman_environment.json
+
+# deploy:
+  # provider: script
+  # github_token: $github_token
+  # local_dir: build
+  # on:
+    # branch: master
