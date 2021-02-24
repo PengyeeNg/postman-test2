@@ -17,8 +17,8 @@ install:
   #- node_modules/.bin/newman --version
 
 script:
-  - node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
-
+  #- node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
+  - node_modules/.bin/newman run https://github.com/PengyeeNg/postman-test2/blob/master/tests3/Frontend_Calls.postman3_collection.json -e https://github.com/PengyeeNg/postman-test2/blob/master/tests3/aliyun_staging.postman3_environment.json
 # deploy:
   # provider: script
   # github_token: $github_token
