@@ -7,6 +7,5 @@ install:
   - npm install newman
 
 script:
-  #- node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
-  - node_modules/.bin/newman run https://www.getpostman.com/collections/aa8c4d146c0237ebee14 -e tests3/aliyun_staging.postman3_environment.json
-after_script:
+  - node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
+
