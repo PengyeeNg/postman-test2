@@ -4,14 +4,8 @@ node_js:
 os: windows
 
 install:
-- mkdir postman-api-reports
-- cd postman-api-reports
-- npm init -y
-- npm install newman
-- npm install -S newman-reporter-htmlextra
+  - npm install newman
 
 script:
-  - npx newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json -r htmlextra
- 
-after_script:
-  - npm run report
+  - node_modules/.bin/newman run tests3/Frontend_Calls.postman3_collection.json -e tests3/aliyun_staging.postman3_environment.json
+
