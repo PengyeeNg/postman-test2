@@ -15,7 +15,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"if (pm.response.code === 300) {\r",
+									"if (pm.response.code === 200) {\r",
 									"// TEST CASE 1: Registration Validation\r",
 									"var jsonData = pm.response.json();\r",
 									"if (jsonData.errcode === 0){\r",
